@@ -4,7 +4,7 @@
 
 [![Usage](https://img.shields.io/badge/usage-personal%20%2F%20educational-blue)](LICENSE)
 [![Last Commit](https://img.shields.io/github/last-commit/Yeshwanth-Gujja/Git_GitHub_Mastery)](https://github.com/Yeshwanth-Gujja/Git_GitHub_Mastery/commits/main)
-[![Stars](https://img.shields.io/github/stars/Yeshwanth-Gujja/Git_GitHub_Mastery?style=flat)](https://github.com/Yeshwanth-Gujja/Git_GitHub_Mastery/stargazers)
+[![Stars](https://img.shields.io/github/stars/Yeshwanth-Gujja/Git_GitHub_Mastery?style=flat&cacheSeconds=300)](https://github.com/Yeshwanth-Gujja/Git_GitHub_Mastery/stargazers)
 
 ## Start Here
 

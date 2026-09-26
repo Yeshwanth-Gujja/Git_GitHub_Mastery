@@ -3,7 +3,7 @@
 > A complete, practical Git & GitHub reference with commands, workflows, diagrams, and real-world scenarios.
 
 [![Usage](https://img.shields.io/badge/usage-personal%20%2F%20educational-blue)](LICENSE)
-[![Last Commit](https://img.shields.io/github/last-commit/yourprofile/git-github-master-notes)](https://github.com/yourprofile/git-github-master-notes/commits/main)
+[![Last Commit](https://img.shields.io/github/last-commit/Yeshwanth-Gujja/Git_GitHub_Mastery)](https://github.com/Yeshwanth-Gujja/Git_GitHub_Mastery/commits/main)
 [![Stars](https://img.shields.io/github/stars/yourprofile/git-github-master-notes?style=flat)](https://github.com/yourprofile/git-github-master-notes/stargazers)
 
 ## Start Here
@@ -132,5 +132,10 @@ See [LICENSE](LICENSE) for the complete terms.
 
 ## Connect
 
-- LinkedIn: https://linkedin.com/in/yourprofile
-- Instagram: https://instagram.com/yourprofile
+## Connect
+
+- GitHub: https://github.com/Yeshwanth-Gujja
+- LinkedIn: https://www.linkedin.com/in/yeshwanthgujja/
+- Leetcode: https://leetcode.com/u/Yeshwanth_Gujja/
+- Instagram: https://www.instagram.com/yesh_matrix
+- X:https://x.com/Yeshwanth_Gujja

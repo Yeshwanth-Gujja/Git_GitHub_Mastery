@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REPO_DIR="${1:-git-github-master-notes}"
+REPO_DIR="${1:-Git_GitHub_Mastery}"
 mkdir -p "$REPO_DIR"
 cd "$REPO_DIR"
 
@@ -118,9 +118,9 @@ cat > "README.md" <<'__GITGITHUB_EOF__'
 
 > A complete, practical Git & GitHub reference with commands, workflows, diagrams, and real-world scenarios.
 
-[![License](https://img.shields.io/github/license/yourprofile/git-github-master-notes)](LICENSE)
-[![Last Commit](https://img.shields.io/github/last-commit/yourprofile/git-github-master-notes)](https://github.com/yourprofile/git-github-master-notes/commits/main)
-[![Stars](https://img.shields.io/github/stars/yourprofile/git-github-master-notes?style=flat)](https://github.com/yourprofile/git-github-master-notes/stargazers)
+[![License](https://img.shields.io/github/license/Yeshwanth-Gujja/Git_GitHub_Mastery)](LICENSE)
+[![Last Commit](https://img.shields.io/github/last-commit/Yeshwanth-Gujja/Git_GitHub_Mastery)](https://github.com/Yeshwanth-Gujja/Git_GitHub_Mastery/commits/main)
+[![Stars](https://img.shields.io/github/stars/Yeshwanth-Gujja/Git_GitHub_Mastery?style=flat)](https://github.com/Yeshwanth-Gujja/Git_GitHub_Mastery/stargazers)
 
 ## Start Here
 
@@ -188,8 +188,8 @@ Start with the numbered notes in order. GitHub renders Markdown directly, so the
 ### Clone locally
 
 ```bash
-git clone https://github.com/yourprofile/git-github-master-notes.git
-cd git-github-master-notes
+git clone https://github.com/Yeshwanth-Gujja/Git_GitHub_Mastery.git
+cd Git_GitHub_Mastery
 ```
 
 ### Practice locally
@@ -237,8 +237,11 @@ This repository is released under the [MIT License](LICENSE).
 
 ## Connect
 
-- LinkedIn: https://linkedin.com/in/yourprofile
-- Instagram: https://instagram.com/yourprofile
+- GitHub: https://github.com/Yeshwanth-Gujja
+- LinkedIn: https://www.linkedin.com/in/yeshwanthgujja/
+- Leetcode: https://leetcode.com/u/Yeshwanth_Gujja/
+- Instagram: https://www.instagram.com/yesh_matrix
+- X: https://x.com/Yeshwanth_Gujja
 __GITGITHUB_EOF__
 
 mkdir -p "cheatsheets"

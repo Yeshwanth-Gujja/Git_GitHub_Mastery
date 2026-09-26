@@ -2,7 +2,7 @@
 
 > A complete, practical Git & GitHub reference with commands, workflows, diagrams, and real-world scenarios.
 
-[![License](https://img.shields.io/github/license/yourprofile/git-github-master-notes)](LICENSE)
+[![Usage](https://img.shields.io/badge/usage-personal%20%2F%20educational-blue)](LICENSE)
 [![Last Commit](https://img.shields.io/github/last-commit/yourprofile/git-github-master-notes)](https://github.com/yourprofile/git-github-master-notes/commits/main)
 [![Stars](https://img.shields.io/github/stars/yourprofile/git-github-master-notes?style=flat)](https://github.com/yourprofile/git-github-master-notes/stargazers)
 
@@ -109,7 +109,18 @@ See [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
 
 ## License
 
-This repository is released under the [MIT License](LICENSE).
+This repository is provided under custom **Personal & Educational Use Only** terms.
+
+You may read, study, and use these materials for personal learning and educational purposes.
+
+Without prior written permission, you may not:
+- Republish or redistribute the notes or substantial portions of this repository.
+- Sell, monetize, or commercially exploit the materials.
+- Publish modified or derivative versions of the materials.
+- Claim the materials as your own work.
+- Remove or alter copyright or attribution notices.
+
+See [LICENSE](LICENSE) for the complete terms.
 
 ## Suggested GitHub Topics
 

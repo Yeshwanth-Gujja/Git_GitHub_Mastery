@@ -80,27 +80,37 @@ Please keep pull requests small enough to review clearly.
 __GITGITHUB_EOF__
 
 cat > "LICENSE" <<'__GITGITHUB_EOF__'
-MIT License
+All Rights Reserved
 
-Copyright (c) 2026 Git & GitHub Master Notes contributors
+Copyright (c) 2026 Yeshwanth
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Personal & Educational Use Only
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+This repository and its contents, including the notes, documentation, diagrams,
+cheatsheets, examples, and other original materials, are protected by copyright.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Permission is granted to any person to read, view, study, and use the materials
+for personal and educational purposes, including learning, self-study, classroom
+discussion, and personal reference.
+
+Without prior written permission from the copyright holder, you may NOT:
+
+- Republish or redistribute the notes or substantial portions of this repository.
+- Sell, monetize, or otherwise use the materials for commercial purposes.
+- Publish a modified, adapted, translated, or derivative version of the materials.
+- Present the materials, in whole or in substantial part, as your own work.
+- Remove, obscure, or alter the copyright or attribution notices.
+
+You may link to this repository when sharing it with others.
+
+Permission requests for uses outside the terms above should be directed to the
+copyright holder.
+
+THE MATERIALS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE COPYRIGHT
+HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM THE USE
+OF THE MATERIALS.
 __GITGITHUB_EOF__
 
 cat > "README.md" <<'__GITGITHUB_EOF__'

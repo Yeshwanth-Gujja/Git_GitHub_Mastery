@@ -4,7 +4,7 @@
 
 [![Usage](https://img.shields.io/badge/usage-personal%20%2F%20educational-blue)](LICENSE)
 [![Last Commit](https://img.shields.io/github/last-commit/Yeshwanth-Gujja/Git_GitHub_Mastery)](https://github.com/Yeshwanth-Gujja/Git_GitHub_Mastery/commits/main)
-[![Stars](https://img.shields.io/github/stars/yourprofile/git-github-master-notes?style=flat)](https://github.com/yourprofile/git-github-master-notes/stargazers)
+[![Stars](https://img.shields.io/github/stars/Yeshwanth-Gujja/Git_GitHub_Mastery?style=flat)](https://github.com/Yeshwanth-Gujja/Git_GitHub_Mastery/stargazers)
 
 ## Start Here
 
@@ -72,8 +72,8 @@ Start with the numbered notes in order. GitHub renders Markdown directly, so the
 ### Clone locally
 
 ```bash
-git clone https://github.com/yourprofile/git-github-master-notes.git
-cd git-github-master-notes
+git clone https://github.com/Yeshwanth-Gujja/Git_GitHub_Mastery.git
+cd Git_GitHub_Mastery
 ```
 
 ### Practice locally

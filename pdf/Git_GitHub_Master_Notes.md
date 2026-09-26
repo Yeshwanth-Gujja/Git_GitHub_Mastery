@@ -1,156 +1,24 @@
-#!/usr/bin/env bash
-set -euo pipefail
+# Git & GitHub — Master Notes
 
-REPO_DIR="${1:-Git_GitHub_Mastery}"
-mkdir -p "$REPO_DIR"
-cd "$REPO_DIR"
+---
 
-cat > ".gitignore" <<'__GITGITHUB_EOF__'
-# OS files
-.DS_Store
-Thumbs.db
+## Contents
 
-# Editor / IDE files
-.vscode/
-.idea/
+1. Big Picture — Why Git & GitHub Exist
+2. Core Concepts — The "Why" Behind Everything
+3. Setup & First-Time Config
+4. Command Playbook — Detailed Reference
+5. Visual Models
+6. Workflows
+7. Practical Scenarios
+8. Glossary
+9. Interview Preparation
+10. Practice / Action Items
 
-# Dependencies
-node_modules/
+## Learning Goals
 
-# Build artifacts
-dist/
-__GITGITHUB_EOF__
-
-cat > "CODE_OF_CONDUCT.md" <<'__GITGITHUB_EOF__'
-# Code of Conduct
-
-## Our Standard
-
-This project is intended to be a professional, practical learning resource. Contributors are expected to communicate respectfully, assume good faith, and focus criticism on the work rather than the person.
-
-## Unacceptable Behavior
-
-Examples include:
-
-- Harassment, discrimination, or personal attacks.
-- Deliberate disruption of discussions or pull requests.
-- Publishing private information without permission.
-- Intimidation or hostile behavior toward contributors.
-
-## Enforcement
-
-Project maintainers may remove or edit contributions and may restrict participation when behavior violates this Code of Conduct.
-
-## Scope
-
-This Code of Conduct applies to project discussions, issues, pull requests, reviews, and other repository spaces maintained for this project.
-__GITGITHUB_EOF__
-
-cat > "CONTRIBUTING.md" <<'__GITGITHUB_EOF__'
-# Contributing
-
-Thank you for contributing to **Git & GitHub Master Notes**.
-
-## Before You Start
-
-- Read the existing notes and preserve their terminology and structure.
-- Keep changes focused and beginner-friendly.
-- Do not remove technical details just to shorten a section.
-- Verify commands, Markdown links, code blocks, and diagrams before opening a pull request.
-
-## Workflow
-
-1. Fork the repository.
-2. Create a focused branch for your change.
-3. Make the change and review the diff.
-4. Test any commands or examples you changed.
-5. Commit with a clear, imperative commit message.
-6. Push the branch and open a pull request.
-
-## Pull Requests
-
-Include:
-
-- What changed.
-- Why the change is useful.
-- Which notes or examples are affected.
-- Any commands or examples you tested.
-
-Please keep pull requests small enough to review clearly.
-__GITGITHUB_EOF__
-
-cat > "LICENSE" <<'__GITGITHUB_EOF__'
-All Rights Reserved
-
-Copyright (c) 2026 Yeshwanth
-
-Personal & Educational Use Only
-
-This repository and its contents, including the notes, documentation, diagrams,
-cheatsheets, examples, and other original materials, are protected by copyright.
-
-Permission is granted to any person to read, view, study, and use the materials
-for personal and educational purposes, including learning, self-study, classroom
-discussion, and personal reference.
-
-Without prior written permission from the copyright holder, you may NOT:
-
-- Republish or redistribute the notes or substantial portions of this repository.
-- Sell, monetize, or otherwise use the materials for commercial purposes.
-- Publish a modified, adapted, translated, or derivative version of the materials.
-- Present the materials, in whole or in substantial part, as your own work.
-- Remove, obscure, or alter the copyright or attribution notices.
-
-You may link to this repository when sharing it with others.
-
-Permission requests for uses outside the terms above should be directed to the
-copyright holder.
-
-THE MATERIALS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
-FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE COPYRIGHT
-HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM THE USE
-OF THE MATERIALS.
-__GITGITHUB_EOF__
-
-cat > "README.md" <<'__GITGITHUB_EOF__'
-# Git & GitHub Master Notes
-
-> A complete, practical Git & GitHub reference with commands, workflows, diagrams, and real-world scenarios.
-
-[![License](https://img.shields.io/github/license/Yeshwanth-Gujja/Git_GitHub_Mastery)](LICENSE)
-[![Last Commit](https://img.shields.io/github/last-commit/Yeshwanth-Gujja/Git_GitHub_Mastery)](https://github.com/Yeshwanth-Gujja/Git_GitHub_Mastery/commits/main)
-[![Stars](https://img.shields.io/github/stars/Yeshwanth-Gujja/Git_GitHub_Mastery?style=flat)](https://github.com/Yeshwanth-Gujja/Git_GitHub_Mastery/stargazers)
-
-## Start Here
-
-For a first pass, use this path:
-
-1. [01 — Big Picture](notes/01-big-picture.md) to understand why Git exists and how Git differs from GitHub.
-2. [02 — Core Concepts](notes/02-core-concepts.md) to learn the working tree, index, repository, commits, branches, `HEAD`, remotes, merges, rebases, pull requests, conflicts, and diffs.
-3. [03 — Setup](notes/03-setup.md) to install Git, configure identity, choose the default branch, and set up authentication.
-4. [04 — Command Playbook](notes/04-command-playbook.md) to work through the commands by purpose and Git state.
-5. [06 — Workflows](notes/06-workflows.md) and [07 — Practical Scenarios](notes/07-practical-scenarios.md) to connect the commands to real development work.
-6. [09 — Cheat Sheet](notes/09-cheat-sheet.md) when you need a compact command reference.
-
-The [examples](examples/) directory contains small, reproducible demonstrations for conflicts, rebase, stash, and bisect.
-
-# Complete PDF
-
-Prefer reading the complete notes as a single document?
-
-[📘 Download the Complete Git & GitHub Master Notes PDF](pdf/Git_GitHub_Master_Notes.pdf)
-
-This PDF combines the complete master notes into a single document for offline reading, reference, and study.
-
-## Who This Is For
-
-- Beginners who want a practical path from first-time Git setup to everyday GitHub collaboration.
-- Developers who want a command-focused reference for branching, history, undoing changes, remote synchronization, debugging, and recovery.
-- Developers preparing for interviews and professional Git workflows.
-
-## What You'll Learn
-
+- Git is a **distributed version control system** used to track code changes, preserve history, and support collaboration.
+- GitHub is a **cloud platform for hosting Git repositories and collaborating** with other developers.
 - The core local Git model is **Working Directory → Staging Area/Index → Repository**.
 - A **commit** is a permanent historical record of a project state; a **branch** is a movable reference to commits.
 - Branches let multiple developers work independently without immediately changing `main`.
@@ -162,645 +30,7 @@ This PDF combines the complete master notes into a single document for offline r
 
 ---
 
-## Repository Map
-
-| Area | Purpose |
-|---|---|
-| `notes/` | Full master notes, divided into the requested sections |
-| `examples/` | Minimal hands-on demonstrations |
-| `pdf/` | Complete combined PDF version of the master notes |
-| `cheatsheets/` | One-page quick reference and PDF generation script |
-| `scripts/` | Repository bootstrap script |
-
-## Table of Contents
-
-- [01 — Big Picture](notes/01-big-picture.md)
-- [02 — Core Concepts](notes/02-core-concepts.md)
-- [03 — Setup & First-Time Config](notes/03-setup.md)
-- [04 — Command Playbook](notes/04-command-playbook.md)
-- [05 — Visual Walkthroughs](notes/05-visual-walkthroughs.md)
-- [06 — Workflows](notes/06-workflows.md)
-- [07 — Practical Scenarios](notes/07-practical-scenarios.md)
-- [08 — Common Mistakes](notes/08-common-mistakes.md)
-- [09 — Cheat Sheet](notes/09-cheat-sheet.md)
-- [10 — Glossary](notes/10-glossary.md)
-- [11 — Action Items](notes/11-action-items.md)
-- [12 — Open Questions](notes/12-open-questions.md)
-- [13 — Gaps Filled & Final Mental Model](notes/13-gaps-filled.md)
-
-## How to Use This Repository
-
-### Read online
-
-Start with the numbered notes in order. GitHub renders Markdown directly, so the repository can be used as a reference without cloning it.
-
-### Clone locally
-
-```bash
-git clone https://github.com/Yeshwanth-Gujja/Git_GitHub_Mastery.git
-cd Git_GitHub_Mastery
-```
-
-### Practice locally
-
-The examples are intentionally small. Each example has its own README with the commands and sequence needed to reproduce the workflow.
-
-### Use the cheat sheet
-
-Read [cheatsheets/git-cheatsheet.md](cheatsheets/git-cheatsheet.md) for a compact command reference. To generate a PDF locally:
-
-```bash
-bash cheatsheets/generate-pdf.sh
-```
-
-## GitHub Pages
-
-You can publish a repository site directly from GitHub:
-
-1. Open **Settings → Pages**.
-2. Under **Build and deployment**, choose **Deploy from a branch**.
-3. Select the `main` branch and either `/ (root)` or a configured `/docs` directory.
-4. Save the configuration and use the generated Pages URL.
-
-For a richer documentation site, the same notes can be presented through a documentation generator such as MkDocs. The repository currently keeps the notes in `notes/`, so a future Pages build can map that content into a dedicated site structure without changing the source notes.
-
-## Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
-
-## Code of Conduct
-
-See [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
-
-## License
-
-This repository is released under the [MIT License](LICENSE).
-
-## Suggested GitHub Topics
-
-`git` · `github` · `version-control` · `learning-notes` · `developer-tools` · `cheatsheet`
-
-## Suggested Repository Description
-
-> A complete, practical Git & GitHub reference with commands, workflows, diagrams, and real-world scenarios. Perfect for beginners and professionals.
-
-## Connect
-
-- GitHub: https://github.com/Yeshwanth-Gujja
-- LinkedIn: https://www.linkedin.com/in/yeshwanthgujja/
-- Leetcode: https://leetcode.com/u/Yeshwanth_Gujja/
-- Instagram: https://www.instagram.com/yesh_matrix
-- X: https://x.com/Yeshwanth_Gujja
-__GITGITHUB_EOF__
-
-mkdir -p "cheatsheets"
-cat > "cheatsheets/generate-pdf.sh" <<'__GITGITHUB_EOF__'
-#!/usr/bin/env bash
-set -euo pipefail
-
-INPUT="cheatsheets/git-cheatsheet.md"
-OUTPUT="cheatsheets/git-cheatsheet.pdf"
-
-# If pandoc is not available, install it and rerun:
-# pandoc "$INPUT" -o "$OUTPUT"
-
-if ! command -v pandoc >/dev/null 2>&1; then
-  echo "pandoc is not installed. Install pandoc, then rerun this script."
-  exit 1
-fi
-
-pandoc "$INPUT" -o "$OUTPUT"
-echo "Created $OUTPUT"
-__GITGITHUB_EOF__
-chmod +x "cheatsheets/generate-pdf.sh"
-
-mkdir -p "cheatsheets"
-cat > "cheatsheets/git-cheatsheet.md" <<'__GITGITHUB_EOF__'
-# Git Cheat Sheet
-
-> Condensed command reference from the master notes. Use the full [command playbook](../notes/04-command-playbook.md) for detailed explanations.
-
-
-## Setup & Config
-
-```bash
-# verify Git
-git --version
-
-#🎥 identity
-git config --global user.name "Your Name"
-git config --global user.email "you@example.com"
-
- 🎥 default branch
-git config --global init.defaultBranch main
-
-# inspect configuration
-git config --global --list
-
-```
-
-## Starting a Repository
-
-```bash
-# initialize local repo
-git init
-
-#🎥 clone existing repo
-git clone <url>
-
-```
-
-## Daily Workflow
-
-```bash
-# inspect
-git status
-
-#🎥 stage one file
-git add file.txt
-
- 🎥 stage everything in current path
-git add .
-# 🎥 inspect unstaged changes
-git diff
-
-# inspect staged changes
-git diff --staged
-# 🎥 commit
-git commit -m "Add feature
-
-# 🎥 history
-git log
-
-# compact history
-git log --oneline --graph --decorate --all
-
-```
-
-## Branching & Switching
-
-```bash
-# list branches
-git branch
-
-#🎥 create branch
-git branch feature-login
-
- 🎥 switch branch
-git checkout feature-login
-
-# modern switch
-git switch feature-login
-# 🎥 create + switch
-git checkout -b feature-login
-
-# modern create + switch
-git switch -c feature-login
-
-# delete merged branch
-git branch -d feature-login
-
-```
-
-## Remote & Collaboration
-
-```bash
-# inspect remotes
-git remote -v
-
-#🎥 add remote
-git remote add origin <url>
-
- 🎥 first push
-git push -u origin main
-# 🎥 first feature push
-git push -u origin feature-login
-# 🎥 later push
-git pus
-
-# 🎥 pull
-git pull
-
-# fetch only
-git fetch origin
-
-# remove stale remote-tracking branches
-git fetch --prune
-
-```
-
-## Branch Integration
-
-```bash
-# merge
-git merge main
-
-# rebase
-git rebase main
-
-# continue rebase
-git rebase --continue
-
-# abort rebase
-git rebase --abort
-
-# abort merge
-git merge --abort
-
-```
-
-## Undoing & Fixing
-
-```bash
-# discard working-tree file changes
-git restore file.txt
-
-# unstage
-git restore --staged file.txt
-
-# mixed reset
-git reset HEAD~1
-
-#🎥 soft reset
-git reset --soft HEAD~1
-
- 🎥 hard reset
-git reset --hard HEAD~1
-# 🎥 create inverse commit
-git revert <commit>
-
-# recover moved/deleted refs
-git reflog
-
-```
-
-## Stash & Temporary Work
-
-```bash
-# stash
-git stash
-
-#🎥 list
-git stash list
-
- 🎥 apply
-git stash apply stash@{0}
-
-# apply + remove
-git stash pop
-
-# include untracked
-git stash -u
-
-```
-
-## Inspecting & Debugging
-
-```bash
-# commit details
-git show <commit>
-
-# compare branches
-git diff main..feature-login
-
-# history
-git log
-
-# binary-search a regression
-git bisect start
-git bisect good <commit>
-git bisect bad
-git bisect reset
-
-```
-
-## Specialized Operations
-
-```bash
-# cherry-pick a commit
-git cherry-pick <commit>
-
-# release tag
-git tag -a v1.0.0 -m "Release 1.0.0"
-git push origin v1.0.0
-
-# worktree
-git worktree add ../hotfix hotfix-production
-
-# submodule
-git submodule add <url> libs/example
-
-# preview clean
-git clean -n
-
-```
-
----
-__GITGITHUB_EOF__
-
-mkdir -p "examples/bisect-demo"
-cat > "examples/bisect-demo/README.md" <<'__GITGITHUB_EOF__'
-# Bisect Demo
-
-This example is designed for `git bisect run`. The test script is the only moving part: a good commit has it return `0`, and a bad commit has it return `1`.
-
-## Reproduce
-
-Initialize and commit the good state:
-
-```bash
-git init
-chmod +x test.sh
-git add test.sh
-git commit -m "Add passing test"
-```
-
-Create a few normal commits between the good state and the regression. For example, edit the file or add comments and commit each change.
-
-Then introduce the regression by changing the last line of `test.sh` from:
-
-```bash
-exit 0
-```
-
-to:
-
-```bash
-exit 1
-```
-
-Commit that bad state:
-
-```bash
-git add test.sh
-git commit -m "Introduce regression"
-```
-
-Start bisect:
-
-```bash
-git bisect start
-git bisect bad
-git bisect good <good-commit>
-```
-
-Run the automated test:
-
-```bash
-git bisect run ./test.sh
-```
-
-Git checks candidate commits and identifies the first bad commit.
-
-Finish the bisect session:
-
-```bash
-git bisect reset
-```
-__GITGITHUB_EOF__
-
-mkdir -p "examples/bisect-demo"
-cat > "examples/bisect-demo/test.sh" <<'__GITGITHUB_EOF__'
-#!/usr/bin/env bash
-set -e
-
-# This file is the test predicate for git bisect.
-# Good commit: 0
-# Bad commit: 1
-
-exit 0
-__GITGITHUB_EOF__
-chmod +x "examples/bisect-demo/test.sh"
-
-mkdir -p "examples/merge-conflict-demo"
-cat > "examples/merge-conflict-demo/README.md" <<'__GITGITHUB_EOF__'
-# Merge Conflict Demo
-
-This example is intentionally tiny. The goal is to reproduce a basic merge conflict by changing the same line in `file1.txt` on two branches.
-
-## Reproduce the conflict
-
-```bash
-git init
-git add .
-git commit -m "Add conflict demo"
-
-git switch -c feature-a
-```
-
-Edit `file1.txt` on `feature-a` so the original line becomes something like:
-
-```text
-Feature A version
-```
-
-Then commit:
-
-```bash
-git add file1.txt
-git commit -m "Change file1 on feature-a"
-```
-
-Return to the main branch:
-
-```bash
-git switch -c feature-b main
-```
-
-Edit the same line in `file1.txt` to a different value:
-
-```text
-Feature B version
-```
-
-Commit it:
-
-```bash
-git add file1.txt
-git commit -m "Change file1 on feature-b"
-```
-
-Now merge the other branch:
-
-```bash
-git merge feature-a
-```
-
-Git should report a conflict because both branches changed the same line.
-
-Check the state:
-
-```bash
-git status
-```
-
-Open `file1.txt`, resolve the conflict, remove the conflict markers, and keep the final content you want. Then:
-
-```bash
-git add file1.txt
-git commit
-```
-
-`file2.txt` is included as a second file so you can repeat the same exercise with another path.
-__GITGITHUB_EOF__
-
-mkdir -p "examples/merge-conflict-demo"
-cat > "examples/merge-conflict-demo/file1.txt" <<'__GITGITHUB_EOF__'
-Original line that both branches can change.
-__GITGITHUB_EOF__
-
-mkdir -p "examples/merge-conflict-demo"
-cat > "examples/merge-conflict-demo/file2.txt" <<'__GITGITHUB_EOF__'
-Second file for repeating the conflict exercise.
-__GITGITHUB_EOF__
-
-mkdir -p "examples/rebase-demo"
-cat > "examples/rebase-demo/README.md" <<'__GITGITHUB_EOF__'
-# Rebase Demo
-
-This example provides a tiny `app.js` file that can be edited across branches to demonstrate replaying commits onto a new base.
-
-## Reproduce
-
-Initialize and create the first commit:
-
-```bash
-git init
-git add .
-git commit -m "Add initial app"
-
-git switch -c feature
-```
-
-Make a small feature change in `app.js` and commit it:
-
-```bash
-git add app.js
-git commit -m "Update feature"
-```
-
-Switch back to the main line and make another commit:
-
-```bash
-git switch -c main
-```
-
-Change `app.js` and commit:
-
-```bash
-git add app.js
-git commit -m "Update main"
-```
-
-Now replay the feature work on top of the updated main line:
-
-```bash
-git switch feature
-git rebase main
-```
-
-Inspect the result:
-
-```bash
-git log --graph --oneline --decorate --all
-```
-
-If a conflict occurs, resolve the file, stage it, and continue with:
-
-```bash
-git add app.js
-git rebase --continue
-```
-
-To abandon the rebase:
-
-```bash
-git rebase --abort
-```
-__GITGITHUB_EOF__
-
-mkdir -p "examples/rebase-demo"
-cat > "examples/rebase-demo/app.js" <<'__GITGITHUB_EOF__'
-const app = {
-  name: "rebase-demo",
-  message: "change me on different branches"
-};
-
-console.log(`${app.name}: ${app.message}`);
-__GITGITHUB_EOF__
-
-mkdir -p "examples/stash-demo"
-cat > "examples/stash-demo/README.md" <<'__GITGITHUB_EOF__'
-# Stash Demo
-
-This example shows how `git stash` can temporarily move unfinished local work aside.
-
-## Reproduce
-
-Initialize the example:
-
-```bash
-git init
-git add .
-git commit -m "Add stash demo"
-```
-
-Edit `work.txt` without committing it:
-
-```text
-WORK IN PROGRESS
-```
-
-Check the working tree:
-
-```bash
-git status
-```
-
-Stash the unfinished work:
-
-```bash
-git stash push -m "WIP stash demo"
-```
-
-Confirm the working tree is clean:
-
-```bash
-git status
-```
-
-List stashes:
-
-```bash
-git stash list
-```
-
-Restore the work while keeping the stash entry:
-
-```bash
-git stash apply
-```
-
-Or restore and remove the stash entry on success:
-
-```bash
-git stash pop
-```
-
-To include untracked files in a stash, use `git stash -u`.
-__GITGITHUB_EOF__
-
-mkdir -p "examples/stash-demo"
-cat > "examples/stash-demo/work.txt" <<'__GITGITHUB_EOF__'
-Base work file.
-Edit this file to create unfinished work.
-__GITGITHUB_EOF__
-
-mkdir -p "notes"
-cat > "notes/01-big-picture.md" <<'__GITGITHUB_EOF__'
 # 1. Big Picture — Why Git & GitHub Exist
-
-This section establishes the problem Git solves, the distinction between Git and GitHub, and the core mental model behind version control.
 
 ## 1.1 The problem Git solves
 
@@ -903,13 +133,8 @@ Remote Repository
 > Additional context: Centralized-vs-distributed architecture and a more precise repository model clarify what makes Git a distributed version-control system.
 
 ---
-__GITGITHUB_EOF__
 
-mkdir -p "notes"
-cat > "notes/02-core-concepts.md" <<'__GITGITHUB_EOF__'
 # 2. Core Concepts — The "Why" Behind Everything
-
-This section builds the foundational Git model: working tree, index, repository, commits, branches, HEAD, remotes, integration, and diffs.
 
 ## 2.1 Working Directory / Working Tree
 
@@ -1176,13 +401,6 @@ flowchart LR
 ---
 
 # 3. Setup & First-Time Config
-__GITGITHUB_EOF__
-
-mkdir -p "notes"
-cat > "notes/03-setup.md" <<'__GITGITHUB_EOF__'
-# 3. Setup & First-Time Config
-
-This section covers first-time Git installation, configuration, authentication, and the setup checklist.
 
 ## 3.1 Installing Git
 
@@ -1410,13 +628,6 @@ git@github.com:username/repository.git
 ---
 
 # 4. Command Playbook — Detailed Reference
-__GITGITHUB_EOF__
-
-mkdir -p "notes"
-cat > "notes/04-command-playbook.md" <<'__GITGITHUB_EOF__'
-# 4. Command Playbook — Detailed Reference
-
-This section is the detailed command reference, organized around the Git state each command reads or changes.
 
 This section is the practical command reference. The goal is not to memorize flags mechanically. For each command, understand the state Git reads, the state it changes, and the situations in which the command is appropriate.
 
@@ -4040,13 +3251,6 @@ cherry-pick vs merge
 
 
 # 5. Visual Walkthroughs — Recreate the Source material's Diagrams
-__GITGITHUB_EOF__
-
-mkdir -p "notes"
-cat > "notes/05-visual-walkthroughs.md" <<'__GITGITHUB_EOF__'
-# 5. Visual Walkthroughs — Recreate the Source material's Diagrams
-
-This section preserves the visual models used to understand repository initialization, local and remote flows, branching, pull requests, conflicts, undo operations, stash, and GUI workflows.
 
 ## 5.1 Version-control problem without Git
 
@@ -4257,13 +3461,6 @@ Feature work restored
 ---
 
 # 6. Workflows
-__GITGITHUB_EOF__
-
-mkdir -p "notes"
-cat > "notes/06-workflows.md" <<'__GITGITHUB_EOF__'
-# 6. Workflows
-
-This section turns the concepts and commands into practical solo, feature-branch, fork-and-PR, trunk-based, Git Flow, integration, undo, conflict-resolution, and rebase workflows.
 
 ## 6.1 Solo workflow
 
@@ -4533,13 +3730,6 @@ git push --force-with-lease
 ---
 
 # 7. Practical Scenarios
-__GITGITHUB_EOF__
-
-mkdir -p "notes"
-cat > "notes/07-practical-scenarios.md" <<'__GITGITHUB_EOF__'
-# 7. Practical Scenarios
-
-This section applies the commands to concrete repository tasks and common day-to-day situations.
 
 ## 7.1 Initial repository setup
 
@@ -4716,13 +3906,6 @@ git merge main
 ---
 
 # 8. Common Mistakes & How to Avoid Them
-__GITGITHUB_EOF__
-
-mkdir -p "notes"
-cat > "notes/08-common-mistakes.md" <<'__GITGITHUB_EOF__'
-# 8. Common Mistakes & How to Avoid Them
-
-This section collects the mistakes identified in the notes and the corresponding ways to avoid them.
 
 | Mistake Why it happens Fix           |                        |                                |
 | ---------------------------------------------- | --------------------------------------------- | -------------------------------------------------------------- |
@@ -4750,13 +3933,6 @@ This section collects the mistakes identified in the notes and the corresponding
 ---
 
 # 9. Cheat Sheet — One-Page Quick Reference
-__GITGITHUB_EOF__
-
-mkdir -p "notes"
-cat > "notes/09-cheat-sheet.md" <<'__GITGITHUB_EOF__'
-# 9. Cheat Sheet — One-Page Quick Reference
-
-This section condenses the command reference into a one-page quick-reference format.
 
 ## Setup & Config
 
@@ -4975,13 +4151,6 @@ git clean -n
 ---
 
 # 10. Glossary
-__GITGITHUB_EOF__
-
-mkdir -p "notes"
-cat > "notes/10-glossary.md" <<'__GITGITHUB_EOF__'
-# 10. Glossary
-
-This section provides concise definitions for the Git and GitHub terminology used throughout the notes.
 
 | Term Meaning      |                                  |
 | ---------------------- | ----------------------------------------------------------------- |
@@ -5032,13 +4201,6 @@ This section provides concise definitions for the Git and GitHub terminology use
 ---
 
 # 11. My Action Items
-__GITGITHUB_EOF__
-
-mkdir -p "notes"
-cat > "notes/11-action-items.md" <<'__GITGITHUB_EOF__'
-# 11. My Action Items
-
-This section turns the material into hands-on practice tasks.
 
 - [ ] Install and verify Git with `git --version`.
 - [ ] Configure `user.name` and `user.email`.
@@ -5076,13 +4238,6 @@ This section turns the material into hands-on practice tasks.
 ---
 
 # 12. Open Questions / Things to Revisit
-__GITGITHUB_EOF__
-
-mkdir -p "notes"
-cat > "notes/12-open-questions.md" <<'__GITGITHUB_EOF__'
-# 12. Open Questions / Things to Revisit
-
-This section records points to verify or revisit as Git knowledge becomes more advanced.
 
 - ❓ Some copied command forms may be unclear or malformed; verify Git command syntax when the displayed form does not make sense.
 - ❓ The exact command described for renaming `master` to `main` is transcribed as something resembling `git branch -dm main`; standard practice is generally `git branch -M main` or `git branch -m main`, depending on context.
@@ -5098,13 +4253,6 @@ This section records points to verify or revisit as Git knowledge becomes more a
 ---
 
 # 13. Complete List of Gaps I Filled
-__GITGITHUB_EOF__
-
-mkdir -p "notes"
-cat > "notes/13-gaps-filled.md" <<'__GITGITHUB_EOF__'
-# 13. Complete List of Gaps I Filled
-
-This section records the additional Git coverage incorporated into the master notes and closes with the final mental model.
 
 - **Centralized vs distributed VCS** — explains what makes Git architecturally different from older centralized approaches.
 - **Precise index/staging-area model** — clarifies what `git add` actually does internally.
@@ -5221,10 +4369,17 @@ Need one specific commit elsewhere
 
 - Git becomes most valuable when something goes wrong: broken code, unwanted changes, merge conflicts, bad commits, unfinished work, or problematic production changes.
 - The professional goal is not memorizing hundreds of commands. It is understanding **what state your repository is in, what state you want, and which command moves you safely from one state to the other**.
-__GITGITHUB_EOF__
 
-mkdir -p "scripts"
-cp "$0" "scripts/create-repo.sh"
-chmod +x "scripts/create-repo.sh"
+---
 
-echo "Repository created at: $(pwd)"
+<p align="center">
+  <a href="https://github.com/Yeshwanth-Gujja"><img src="https://cdn.simpleicons.org/github/181717" alt="GitHub" width="20" height="20"></a>&nbsp;&nbsp;<a href="https://github.com/Yeshwanth-Gujja">Yeshwanth-Gujja</a>
+  &nbsp;&nbsp;&nbsp;|
+  &nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/in/yeshwanthgujja/"><img src="https://cdn.simpleicons.org/linkedin/0A66C2" alt="LinkedIn" width="20" height="20"></a>&nbsp;&nbsp;<a href="https://www.linkedin.com/in/yeshwanthgujja/">yeshwanthgujja</a>
+  &nbsp;&nbsp;&nbsp;|
+  &nbsp;&nbsp;&nbsp;<a href="https://leetcode.com/u/Yeshwanth_Gujja/"><img src="https://cdn.simpleicons.org/leetcode/FFA116" alt="LeetCode" width="20" height="20"></a>&nbsp;&nbsp;<a href="https://leetcode.com/u/Yeshwanth_Gujja/">Yeshwanth_Gujja</a>
+  &nbsp;&nbsp;&nbsp;|
+  &nbsp;&nbsp;&nbsp;<a href="https://www.instagram.com/yesh_matrix"><img src="https://cdn.simpleicons.org/instagram/E4405F" alt="Instagram" width="20" height="20"></a>&nbsp;&nbsp;<a href="https://www.instagram.com/yesh_matrix">yesh_matrix</a>
+  &nbsp;&nbsp;&nbsp;|
+  &nbsp;&nbsp;&nbsp;<a href="https://x.com/Yeshwanth_Gujja"><img src="https://cdn.simpleicons.org/x/000000" alt="X" width="20" height="20"></a>&nbsp;&nbsp;<a href="https://x.com/Yeshwanth_Gujja">Yeshwanth_Gujja</a>
+</p>

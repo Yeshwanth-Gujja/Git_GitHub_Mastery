@@ -4,7 +4,10 @@
 
 [![Usage](https://img.shields.io/badge/usage-personal%20%2F%20educational-blue)](LICENSE)
 [![Last Commit](https://img.shields.io/github/last-commit/Yeshwanth-Gujja/Git_GitHub_Mastery)](https://github.com/Yeshwanth-Gujja/Git_GitHub_Mastery/commits/main)
+<<<<<<< HEAD
 [![Stars](https://img.shields.io/github/stars/Yeshwanth-Gujja/Git_GitHub_Mastery?style=flat&cacheSeconds=300)](https://github.com/Yeshwanth-Gujja/Git_GitHub_Mastery/stargazers)
+=======
+>>>>>>> 8270347 (Add complete Git and GitHub notes PDF)
 
 ## Start Here
 
@@ -18,6 +21,14 @@ For a first pass, use this path:
 6. [09 — Cheat Sheet](notes/09-cheat-sheet.md) when you need a compact command reference.
 
 The [examples](examples/) directory contains small, reproducible demonstrations for conflicts, rebase, stash, and bisect.
+
+# Complete PDF
+
+Prefer reading the complete notes as a single document?
+
+[📘 Download the Complete Git & GitHub Master Notes PDF](pdf/Git_GitHub_Master_Notes.pdf)
+
+This PDF combines the complete master notes into a single document for offline reading, reference, and study.
 
 ## Who This Is For
 
@@ -44,6 +55,7 @@ The [examples](examples/) directory contains small, reproducible demonstrations 
 |---|---|
 | `notes/` | Full master notes, divided into the requested sections |
 | `examples/` | Minimal hands-on demonstrations |
+| `pdf/` | Complete combined PDF version of the master notes |
 | `cheatsheets/` | One-page quick reference and PDF generation script |
 | `scripts/` | Repository bootstrap script |
 
@@ -138,4 +150,8 @@ See [LICENSE](LICENSE) for the complete terms.
 - LinkedIn: https://www.linkedin.com/in/yeshwanthgujja/
 - Leetcode: https://leetcode.com/u/Yeshwanth_Gujja/
 - Instagram: https://www.instagram.com/yesh_matrix
+<<<<<<< HEAD
 - X:https://x.com/Yeshwanth_Gujja
+=======
+- X: https://x.com/Yeshwanth_Gujja
+>>>>>>> 8270347 (Add complete Git and GitHub notes PDF)

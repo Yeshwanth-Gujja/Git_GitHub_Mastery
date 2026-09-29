@@ -262,8 +262,4 @@ flowchart LR
 
 - This is the foundational mental model behind most daily Git commands.
 
-> Additional context: The precise roles of the index, commit object, branch reference, remote-tracking branch, diff, and rebase are included so the practical behavior maps to Git's underlying mechanics.
-
----
-
-# 3. Setup & First-Time Config
+> Additional context: The precise roles of the index, commit object, branch reference, remote-tracking branch, diff, and rebase are included so the practical behavior maps to Git's underlying
